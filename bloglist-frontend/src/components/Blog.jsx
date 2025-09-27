@@ -16,6 +16,7 @@ const Blog = ({ blog, likeBlog, handleDeleteBlog, isDeleteAllowed }) => {
 
   return (
     <div
+      className={"blog"}
       style={{
         borderStyle: "solid",
         borderWidth: "1px",
@@ -24,7 +25,7 @@ const Blog = ({ blog, likeBlog, handleDeleteBlog, isDeleteAllowed }) => {
         padding: "10px",
       }}
     >
-      {blog.title}{" "}
+      {`${blog.title} - ${blog.author}`}{" "}
       <button onClick={toggleShow}>{show ? "Hide" : "View"}</button>
       {show && (
         <>

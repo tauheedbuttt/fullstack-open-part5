@@ -26,17 +26,32 @@ const BlogForm = ({ handleAddBlog }) => {
       <form onSubmit={onSubmit}>
         <label>
           Title:
-          <input name="title" value={blog.title} onChange={handleChange} />
+          <input
+            placeholder="title"
+            name="title"
+            value={blog.title}
+            onChange={handleChange}
+          />
         </label>
         <br />
         <label>
           Author:
-          <input name="author" value={blog.author} onChange={handleChange} />
+          <input
+            placeholder="author"
+            name="author"
+            value={blog.author}
+            onChange={handleChange}
+          />
         </label>
         <br />
         <label>
           URL:
-          <input name="url" value={blog.url} onChange={handleChange} />
+          <input
+            placeholder="url"
+            name="url"
+            value={blog.url}
+            onChange={handleChange}
+          />
         </label>
         <br />
         <button type="submit">save</button>
