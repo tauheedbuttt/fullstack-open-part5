@@ -49,7 +49,7 @@ blogRouter.put("/:id", async (request, response) => {
     id,
     { title, author, url, likes },
     { new: true }
-  );
+  ).populate("user", "id username name");
 
   if (!blog) return response.status(404).send();
 
