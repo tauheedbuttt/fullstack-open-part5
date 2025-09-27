@@ -70,7 +70,9 @@ blogRouter.post(
 
     // save id in blog
     const blog = new Blog({ ...request.body, user: user.id });
-    const result = await blog.save();
+    const result = await (
+      await blog.save()
+    ).populate("user", "id name username");
 
     // save blog in user
     user.blogs = [...user.blogs, blog.id];

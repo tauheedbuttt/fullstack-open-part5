@@ -16,7 +16,7 @@ const Blog = ({ blog, likeBlog, handleDeleteBlog, isDeleteAllowed }) => {
 
   return (
     <div
-      className={"blog"}
+      id={"blog"}
       style={{
         borderStyle: "solid",
         borderWidth: "1px",
